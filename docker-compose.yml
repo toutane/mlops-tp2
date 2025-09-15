@@ -1,0 +1,14 @@
+services:
+  fastapi:
+    image: mlops-tp2-ex3
+    container_name: fastapi
+    ports:
+      - "5042:5042"
+    networks:
+      - mlops-tp2
+    restart: unless-stopped
+
+networks:
+  mlops-tp2:
+    external: true
+    name: mlops-tp2
